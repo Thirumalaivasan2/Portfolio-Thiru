@@ -1,21 +1,16 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Thirumalaivasan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Thirumalaivasan</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }body {
-  background: #0e0e0e;
-  color: #eee;
-  line-height: 1.6;
-}
-
-header {
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+    }header {
   background: #121212;
   padding: 1.5rem 2rem;
   display: flex;
@@ -24,35 +19,37 @@ header {
 }
 
 header h2 {
-  color: #00c6ff;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 1.5rem;
 }
 
 nav a {
-  color: #eee;
+  color: #ccc;
   text-decoration: none;
   position: relative;
+  font-weight: 500;
 }
 
-nav a::after {
+nav a:hover::after {
   content: '';
   position: absolute;
   bottom: -5px;
   left: 0;
-  height: 2px;
-  width: 0;
-  background-color: #00c6ff;
-  transition: width 0.3s;
-}
-
-nav a:hover::after {
   width: 100%;
+  height: 2px;
+  background: #00c6ff;
 }
 
 .container {
@@ -61,34 +58,32 @@ nav a:hover::after {
   padding: 0 2rem;
 }
 
-.section-title {
-  font-size: 2.5rem;
+h1 {
   color: #00c6ff;
-  margin-bottom: 1.5rem;
-  position: relative;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #00c6ff;
+  display: inline-block;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background-color: #00c6ff;
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.about-text {
-  background: #1c1c1c;
-  padding: 2rem;
+.skill {
+  background: #1a1a1a;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,198,255,0.1);
-  animation: fadeIn 1s ease-in;
+  box-shadow: 0 0 8px rgba(0,198,255,0.1);
 }
 
-.about-text p {
-  margin-bottom: 1.2rem;
-  text-align: justify;
+.skill h3 {
+  color: #00c6ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 footer {
@@ -96,23 +91,7 @@ footer {
   padding: 1rem;
   background: #111;
   color: #aaa;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
+  margin-top: 3rem;
 }
 
   </style>
@@ -130,19 +109,26 @@ footer {
       </ul>
     </nav>
   </header>  <div class="container">
-    <h1 class="section-title">About Me</h1>
-    <div class="about-text">
-      <p>I am Thirumalaivasan A, a passionate and goal-driven second-year student pursuing a Bachelor’s degree in Electrical and Electronics Engineering at Government College of Engineering, Salem. I completed my higher secondary education at Don Bosco Higher Secondary School, where I was part of the Computer Science group. My strong academic foundation and keen interest in technology have guided me towards a path where I can combine both hardware and software knowledge effectively.</p><p>My areas of interest include circuit design, embedded systems, and coding. I have actively engaged in practical projects such as designing a new method tachometer, which I presented at Electrofest. I also participated in the Ultimate Line Tracer event at Kurukshetra 2025, where I built an autonomous robot capable of following a specified track, testing my skills in control systems and embedded programming.</p>
-
-  <p>I have completed an internship at Electric Loco Shed, Erode, where I gained hands-on experience in locomotive maintenance and operation. I’ve also worked on motor analysis and testing, and I’m constantly eager to bridge theory with real-world application. As a team player and a proactive learner, I’ve coordinated student groups and even started a LinkedIn group to build a professional network among peers.</p>
-
-  <p>My role model is Dr. A.P.J. Abdul Kalam, whose life, vision, and simplicity continue to inspire me deeply. His contributions to science and dedication to empowering youth motivate me to dream big, stay humble, and work hard toward meaningful innovation in my field.</p>
-
-  <p>My strengths lie in problem-solving, leadership, creativity, and organization, which I continue to develop through participation in intercollegiate competitions and workshops. My short-term goal is to achieve a GPA of 8.25 in my current semester, and my long-term aspiration is to secure a high-paying placement in a core or tech-oriented company.</p>
-
-  <p>In my free time, I enjoy listening to music and reading Tamil literature. These hobbies help me maintain a balanced mindset and stimulate creative thinking. With determination and curiosity, I aim to grow both personally and professionally to make meaningful contributions to the field of Electrical and Electronics Engineering.</p>
-</div>
-
+    <h1>My Skills</h1>
+    <div class="skill-grid">
+      <div class="skill"><h3>Coordinator</h3></div>
+      <div class="skill"><h3>Leadership</h3></div>
+      <div class="skill"><h3>Python (Programming Language)</h3></div>
+      <div class="skill"><h3>C (Programming Language)</h3></div>
+      <div class="skill"><h3>Web Development</h3></div>
+      <div class="skill"><h3>Google Drive</h3></div>
+      <div class="skill"><h3>Microsoft PowerPoint</h3></div>
+      <div class="skill"><h3>Aptitude (Intermediate)</h3></div>
+      <div class="skill"><h3>Microsoft Word</h3></div>
+      <div class="skill"><h3>Autodesk Tinkercad</h3></div>
+      <div class="skill"><h3>Locomotive (Internship at ELS)</h3></div>
+      <div class="skill"><h3>Organization</h3></div>
+      <div class="skill"><h3>Analytical Thinking</h3></div>
+      <div class="skill"><h3>Teamwork Collaboration</h3></div>
+      <div class="skill"><h3>Easily Adaptable</h3></div>
+      <div class="skill"><h3>Logical Reasoning (Intermediate)</h3></div>
+      <div class="skill"><h3>General Knowledge</h3></div>
+    </div>
   </div>  <footer>
     <p>&copy; 2025 Thirumalaivasan A. All rights reserved.</p>
   </footer>
