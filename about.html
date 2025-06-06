@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Thirumalaivasan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }body {
+  background: #0e0e0e;
+  color: #eee;
+  line-height: 1.6;
+}
+
+header {
+  background: #121212;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  color: #00c6ff;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #00c6ff;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00c6ff;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #00c6ff;
+}
+
+.about-text {
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,198,255,0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.about-text p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #aaa;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Thirumalaivasan</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  <div class="container">
+    <h1 class="section-title">About Me</h1>
+    <div class="about-text">
+      <p>I am Thirumalaivasan A, a passionate and goal-driven second-year student pursuing a Bachelor’s degree in Electrical and Electronics Engineering at Government College of Engineering, Salem. I completed my higher secondary education at Don Bosco Higher Secondary School, where I was part of the Computer Science group. My strong academic foundation and keen interest in technology have guided me towards a path where I can combine both hardware and software knowledge effectively.</p><p>My areas of interest include circuit design, embedded systems, and coding. I have actively engaged in practical projects such as designing a new method tachometer, which I presented at Electrofest. I also participated in the Ultimate Line Tracer event at Kurukshetra 2025, where I built an autonomous robot capable of following a specified track, testing my skills in control systems and embedded programming.</p>
+
+  <p>I have completed an internship at Electric Loco Shed, Erode, where I gained hands-on experience in locomotive maintenance and operation. I’ve also worked on motor analysis and testing, and I’m constantly eager to bridge theory with real-world application. As a team player and a proactive learner, I’ve coordinated student groups and even started a LinkedIn group to build a professional network among peers.</p>
+
+  <p>My role model is Dr. A.P.J. Abdul Kalam, whose life, vision, and simplicity continue to inspire me deeply. His contributions to science and dedication to empowering youth motivate me to dream big, stay humble, and work hard toward meaningful innovation in my field.</p>
+
+  <p>My strengths lie in problem-solving, leadership, creativity, and organization, which I continue to develop through participation in intercollegiate competitions and workshops. My short-term goal is to achieve a GPA of 8.25 in my current semester, and my long-term aspiration is to secure a high-paying placement in a core or tech-oriented company.</p>
+
+  <p>In my free time, I enjoy listening to music and reading Tamil literature. These hobbies help me maintain a balanced mindset and stimulate creative thinking. With determination and curiosity, I aim to grow both personally and professionally to make meaningful contributions to the field of Electrical and Electronics Engineering.</p>
+</div>
+
+  </div>  <footer>
+    <p>&copy; 2025 Thirumalaivasan A. All rights reserved.</p>
+  </footer>
+</body>
+</html>
