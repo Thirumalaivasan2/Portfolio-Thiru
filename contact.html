@@ -1,20 +1,16 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Thirumalaivasan</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }body {
-  background-color: #0e0e0e;
-  color: #e0e0e0;
-}
-
-header {
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+    }header {
   background: #121212;
   padding: 1.5rem 2rem;
   display: flex;
@@ -23,110 +19,79 @@ header {
 }
 
 header h2 {
-  color: #00c6ff;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 1.5rem;
 }
 
 nav a {
-  color: #eee;
+  color: #ccc;
   text-decoration: none;
   position: relative;
+  font-weight: 500;
 }
 
-nav a::after {
+nav a:hover::after {
   content: '';
   position: absolute;
   bottom: -5px;
   left: 0;
-  height: 2px;
-  width: 0;
-  background-color: #00c6ff;
-  transition: width 0.3s;
-}
-
-nav a:hover::after {
   width: 100%;
+  height: 2px;
+  background: #00c6ff;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 700px;
   margin: 4rem auto;
   padding: 0 2rem;
+  text-align: center;
 }
 
-.section-title {
-  font-size: 2.5rem;
+h1 {
   color: #00c6ff;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  position: relative;
+  border-bottom: 3px solid #00c6ff;
+  display: inline-block;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background-color: #00c6ff;
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
-form {
+.contact-icons a {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-input, textarea {
-  padding: 0.75rem;
-  background-color: #1b1b1b;
-  border: 1px solid #333;
-  color: #fff;
-  border-radius: 8px;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #00c6ff;
-}
-
-button {
-  background-color: #00c6ff;
-  color: #000;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #0099cc;
-}
-
-.contact-info {
-  margin-top: 3rem;
-  background-color: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,198,255,0.08);
-}
-
-.contact-info p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.contact-info a {
-  color: #00c6ff;
+  align-items: center;
   text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+}
+
+.contact-icons img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
 }
 
 footer {
@@ -152,18 +117,21 @@ footer {
       </ul>
     </nav>
   </header>  <div class="container">
-    <h1 class="section-title">Contact Me</h1>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form><div class="contact-info">
-  <p><strong>Email:</strong> <a href="mailto:thirumalaivasan425@gmail.com">thirumalaivasan425@gmail.com</a></p>
-  <p><strong>Phone:</strong> <a href="tel:6369345636">6369345636</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thirumalai-vasan--ap" target="_blank">linkedin.com/in/thirumalai-vasan--ap</a></p>
-</div>
-
+    <h1>Get in Touch</h1>
+    <div class="contact-icons">
+      <a href="mailto:thirumalaivasan425@gmail.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
+        <span>Email</span>
+      </a>
+      <a href="tel:+916369345636">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon">
+        <span>Call</span>
+      </a>
+      <a href="https://www.linkedin.com/in/thirumalai-vasan--ap" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon">
+        <span>LinkedIn</span>
+      </a>
+    </div>
   </div>  <footer>
     <p>&copy; 2025 Thirumalaivasan A. All rights reserved.</p>
   </footer>
