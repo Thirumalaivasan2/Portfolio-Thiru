@@ -10,6 +10,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0e0e0e;
       color: #f0f0f0;
+      overflow-x: hidden;
     }header {
   background: #121212;
   padding: 1.5rem 2rem;
@@ -56,6 +57,7 @@ nav a:hover::after {
   max-width: 1000px;
   margin: 4rem auto;
   padding: 0 2rem;
+  text-align: center;
 }
 
 h1 {
@@ -66,24 +68,36 @@ h1 {
   display: inline-block;
 }
 
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 160px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .skill {
   background: #1a1a1a;
   padding: 1rem 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,198,255,0.1);
+  box-shadow: 0 0 8px rgba(0,198,255,0.3);
+  width: 250px;
+  text-align: center;
 }
 
 .skill h3 {
   color: #00c6ff;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  margin: 0;
 }
 
 footer {
@@ -110,27 +124,50 @@ footer {
     </nav>
   </header>  <div class="container">
     <h1>My Skills</h1>
-    <div class="skill-grid">
-      <div class="skill"><h3>Coordinator</h3></div>
-      <div class="skill"><h3>Leadership</h3></div>
-      <div class="skill"><h3>Python (Programming Language)</h3></div>
-      <div class="skill"><h3>C (Programming Language)</h3></div>
-      <div class="skill"><h3>Web Development</h3></div>
-      <div class="skill"><h3>Google Drive</h3></div>
-      <div class="skill"><h3>Microsoft PowerPoint</h3></div>
-      <div class="skill"><h3>Aptitude (Intermediate)</h3></div>
-      <div class="skill"><h3>Microsoft Word</h3></div>
-      <div class="skill"><h3>Autodesk Tinkercad</h3></div>
-      <div class="skill"><h3>Locomotive (Internship at ELS)</h3></div>
-      <div class="skill"><h3>Organization</h3></div>
-      <div class="skill"><h3>Analytical Thinking</h3></div>
-      <div class="skill"><h3>Teamwork Collaboration</h3></div>
-      <div class="skill"><h3>Easily Adaptable</h3></div>
-      <div class="skill"><h3>Logical Reasoning (Intermediate)</h3></div>
-      <div class="skill"><h3>General Knowledge</h3></div>
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <div class="skill"><h3>Coordinator</h3></div>
+          <div class="skill"><h3>Leadership</h3></div>
+          <div class="skill"><h3>Python</h3></div>
+        </div>
+        <div class="slide">
+          <div class="skill"><h3>C Language</h3></div>
+          <div class="skill"><h3>Web Development</h3></div>
+          <div class="skill"><h3>Google Drive</h3></div>
+        </div>
+        <div class="slide">
+          <div class="skill"><h3>MS PowerPoint</h3></div>
+          <div class="skill"><h3>Aptitude (Intermediate)</h3></div>
+          <div class="skill"><h3>MS Word</h3></div>
+        </div>
+        <div class="slide">
+          <div class="skill"><h3>Tinkercad</h3></div>
+          <div class="skill"><h3>Locomotive (ELS)</h3></div>
+          <div class="skill"><h3>Organization</h3></div>
+        </div>
+        <div class="slide">
+          <div class="skill"><h3>Analytical Thinking</h3></div>
+          <div class="skill"><h3>Team Collaboration</h3></div>
+          <div class="skill"><h3>Adaptable</h3></div>
+        </div>
+        <div class="slide">
+          <div class="skill"><h3>Logical Reasoning</h3></div>
+          <div class="skill"><h3>General Knowledge</h3></div>
+          <div class="skill"><h3>Creative Problem-Solving</h3></div>
+        </div>
+      </div>
     </div>
   </div>  <footer>
     <p>&copy; 2025 Thirumalaivasan A. All rights reserved.</p>
-  </footer>
-</body>
+  </footer>  <script>
+    const slides = document.getElementById('slides');
+    let index = 0;
+    const totalSlides = slides.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script></body>
 </html>
